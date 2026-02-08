@@ -1,0 +1,83 @@
+export const translations = {
+  welcomeTitle: 'Chào mừng đến Sudoku',
+  starterSubtitle: 'Trang bắt đầu Next.js đơn giản.', 
+  technique: 'Kỹ thuật',
+  noSolutionSteps: 'Không có bước giải pháp nào',
+  header: {
+    title: 'Sudoku',
+    language: 'Ngôn ngữ',
+    toggleLanguage: 'Chuyển đổi ngôn ngữ',
+    contact: 'Liên hệ',
+    help: 'Trợ giúp'
+  },
+  help: {
+    title: 'Cách chơi Sudoku',  
+    generalRulesTitle: 'Quy tắc chung',
+    techniquesTitle: 'Kỹ thuật giải',
+    rules: [
+      'Lưới Sudoku cổ điển là 9x9, chia thành các khối 3x3.',
+      'Mỗi hàng, cột và khối 3x3 phải chứa các số từ 1 đến 9 đúng một lần.',
+      'Không được phép có số trùng lặp trong bất kỳ hàng, cột hoặc khối nào.',
+      'Một số ô được điền sẵn làm gợi ý; phần còn lại phải được người chơi điền vào.',
+      'Mỗi câu đố có thể có nhiều lời giải.'
+    ],
+    techniques: [
+      'Vét cạn: Thử tất cả các kết hợp có thể cho đến khi tìm ra lời giải.',
+      'Quét/Cross-Hatching: quét các hàng, cột và khối với một chữ số cụ thể',
+      'Ô trống cuối cùng/Hidden Single: Khi 8 trong số 9 ô trong một hàng, cột hoặc khối 3x3 đã được điền, ô trống còn lại phải chứa số còn thiếu.',
+      'Naked Single: Khi một ô chỉ còn một ứng viên có thể sau khi kiểm tra hàng, cột và khối của nó.',
+      'Naked Pairs/Triples: Nếu hai ô trong một hàng/cột/box chỉ chứa cùng hai ứng viên, những số đó có thể bị loại bỏ khỏi các ô khác trong đơn vị đó.',
+      'Hidden Pairs/Triples: Khi hai hoặc ba số bị giới hạn trong cùng hai hoặc ba ô trong một đơn vị, ngay cả khi những ô đó có các ứng viên khác.',
+      'Pointing Pairs/Triples: Nếu một ứng viên trong một khối 3x3 chỉ xuất hiện trong một hàng hoặc cột duy nhất, ứng viên đó có thể được loại bỏ khỏi phần còn lại của hàng hoặc cột đó bên ngoài khối.',
+      'Locked Candidates: Khi một số ứng viên trong một hàng hoặc cột bị giới hạn trong một khối 3x3 cụ thể, nó có thể bị loại bỏ khỏi các ô khác trong khối đó',
+      'X-Wing: Một mẫu liên quan đến hai hàng và hai cột, nơi một số bị giới hạn ở hai ô có thể, cho phép loại bỏ số đó khỏi các cột/hàng liên quan.',
+      'Swordfish: Một mở rộng của X-Wing sử dụng ba hàng và ba cột để xác định và loại bỏ các số ứng viên.',
+      'XY-Wing/W-Wing: Các tập hợp logic phức tạp, chuỗi và "gần như khóa" để buộc loại bỏ trong các câu đố khó'  
+    ]
+  },
+  interaction: {
+    initTitle: 'Khởi tạo',
+    randomEasy: 'Ngẫu nhiên - Dễ',
+    randomMedium: 'Ngẫu nhiên - Trung bình',
+    randomHard: 'Ngẫu nhiên - Khó',
+    manual: 'Tự nhập',
+    functionalTitle: 'Chức năng',
+    blockInit: 'Khóa ô đã nhập',
+    reset: 'Đặt lại',
+    validate: 'Kiểm tra',
+    techniquesTitle: 'Kỹ thuật',
+    selectAll: 'Chọn tất cả',
+    process: 'Tiến hành',
+  },
+  techniques: {
+    bruteForce: 'Vét cạn',
+    scanningCrossHatching: 'Quét/Cross-Hatching',
+    lastFreeCellHiddenSingle: 'Ô trống cuối cùng/Hidden Single',
+    nakedSingle: 'Naked Single',
+    nakedPairsTriples: 'Naked Pairs/Triples',
+    hiddenPairsTriples: 'Hidden Pairs/Triples',
+    pointingPairsTriples: 'Pointing Pairs/Triples',
+    lockedCandidates: 'Locked Candidates',
+    xWing: 'X-Wing',
+    swordfish: 'Swordfish',
+    xyWingWWing: 'XY-Wing/W-Wing'
+  },
+  processing: {
+    processedWithTechniques: 'Đã xử lý với các kỹ thuật: {techniques}.',
+    noSolutionFound: 'Không tìm thấy lời giải.'
+  },
+  grids: {
+    sudokuValueTitle: 'Lưới giá trị Sudoku',
+    possibleValuesTitle: 'Lưới giá trị khả dĩ'
+  },
+  validation: {
+    messageTitle: 'Thông báo',
+    messagePlaceholder: 'Thông báo...',
+    noErrors: 'Không tìm thấy lỗi kiểm tra.',
+    rowDuplicate: 'Trùng giá trị {value} theo hàng tại ô r{row}c{col} với ô r{prevRow}c{prevCol}',
+    columnDuplicate: 'Trùng giá trị {value} theo cột tại ô r{row}c{col} với ô r{prevRow}c{prevCol}',
+    blockDuplicate: 'Trùng giá trị {value} theo khối tại ô r{row}c{col} với ô r{prevRow}c{prevCol}'
+  }
+};
+
+export default { translations };
